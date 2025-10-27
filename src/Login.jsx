@@ -5,7 +5,7 @@ import { addUser } from "./utils/userSlice";
 
 
 const Login = () => {
-    const [emailId, setEmailId] = useState("riya@gmail.com");
+    const [id, setEmailId] = useState("riya@gmail.com");
     const [password, setPassword]= useState("Riya@123");
     const dispatch = useDispatch();
     const handleLogin = async() => {
@@ -13,7 +13,7 @@ const Login = () => {
           const res = await axios.post(
             "http://localhost:7777/login",
         {
-          emailId,
+          id,
           password,
          },
          {withCredentials : true}
@@ -37,7 +37,7 @@ const Login = () => {
               </div>
               <input
                 type="text"
-                value={emailId}
+                value={id}
                 className="input input-bordered w-full max-w-xs"
                 onChange={(e) => setEmailId(e.target.value)}
               />
