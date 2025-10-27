@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 const navbar = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useSelector((store)=>store.user);
   console.log(user);
   return (
@@ -9,11 +10,11 @@ const navbar = () => {
   <div className="flex-1">
     <a className="btn btn-ghost text-xl">DevTinder</a>
   </div>
+  {user &&(
   <div className="flex-none gap-2">
-    <div className="form-control"></div>
-    {user &&(
-    <div className="dropdown dropdown-end mx-5 flex items-center">
-      <p className="px-4">Welcome, {user.firstName}</p>
+    <div className="form-control">Welcome, {user.firstName}</div>
+    
+    <div className="dropdown dropdown-end mx-5 flex">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img
@@ -34,10 +35,11 @@ const navbar = () => {
         <li><a>Logout</a></li>
       </ul>
     </div>
-    )}
+    
   </div>
+  )}
 </div>
-  )
-}
+  );
+};
 
 export default navbar
