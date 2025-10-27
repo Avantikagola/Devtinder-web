@@ -1,5 +1,5 @@
 #Devtinder 
-
+-  lesson - 15 
 - created a vite + react application
 - remove unneccessary code and create a hello world app
 - install tailwind css
@@ -11,15 +11,12 @@
 - create an outlet in your bodycomponent
 - create a footer
 
-
-
-
-
-
-
 Body 
    Navbar
    Route=/ => Feed
    Route=/login => Login
    Route=/connections => Connections
    Router=/profile => Profile
+
+-  Lesson - 16
+- Create a Login page
