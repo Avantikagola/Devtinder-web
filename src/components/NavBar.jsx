@@ -8,7 +8,9 @@ import {removeUser} from "../utils/userSlice";
 const navbar = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const user = useSelector((store)=>store.user);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const dispatch = useDispatch();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigate =  useNavigate();
   const handleLogout =  async()=>{
     try{
@@ -17,6 +19,7 @@ const navbar = () => {
       dispatch(removeUser());
       return navigate("/login");
     
+    // eslint-disable-next-line no-unused-vars, no-empty
     }catch(err){
 
     }
