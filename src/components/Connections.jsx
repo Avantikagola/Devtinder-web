@@ -6,7 +6,7 @@ import {connect,useDispatch,useSelector} from "react-redux";
 import {addConnections} from "../utils/connectionSlice";
 
 const Connections = () => {
-    const connections = useSelector((store)=>store.connetions);
+    const connections = useSelector((store)=>store.connections);
 const dispatch= useDispatch();
     const fetchConnections = async()=>{
         try{
@@ -33,7 +33,7 @@ const dispatch= useDispatch();
       <h1 className='text-bold text-3xl'> Connections</h1>
     {connections.map((connections)=>{
 
-        const {firstName, lastName, photUrl, age,gender,about}=connection;
+        const {firstName, lastName, photUrl, age,gender,about}=connections;
        return (
        <div className='flex m-4 p-4 rounded-lg bg-base-300 w-1/2'>
             <div >
