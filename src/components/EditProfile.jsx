@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from "react";
-import UserCard from "./UserCard";
+import UserCard from "./userCard";
 import axios from "axios";
 import {BASE_URL} from "../utils/constant";
 import {useDispatch} from "react-redux";
